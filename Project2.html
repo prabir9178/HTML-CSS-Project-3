@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Resume</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            background: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container{
+            position: relative;
+            width: 100%;
+            max-width: 1000px;
+            min-height: 1000px;
+            margin: 50px;
+            background: #fff;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+        }
+        .container .leftside{
+            position: relative;
+            background: #0c3041;
+            padding: 40px;
+        }
+        .profile{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(77, 36, 36, 0.2);
+        }
+        .profile .image{
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .profile .image img{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 110%;
+            object-fit: cover;
+        }
+
+        .profile h2{
+            color: #b31b1b;
+            font-size: 1em;
+            margin-top: 20px;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 700;
+            line-height: 1.5em;
+
+        }
+
+        .profile h2 span{
+            font-size: 0.8em;
+            font-weight: 500;
+
+        }
+        .contactinfo{
+            padding-top: 40px;
+            font-size: 0.8em
+        }
+        .title{
+            color: #b1c1c4;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .contactinfo ul{
+            position: relative;
+        }
+
+        .contactinfo ul li{
+            position: relative;
+            list-style: none;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        .contactinfo ul li .icon
+        {
+            display: inline-block;
+            width: 20px;
+            font-size: 18px;
+            color: rgb(69, 7, 145);
+        }
+        .contactinfo ul li span
+        {
+            color: rgb(16, 134, 118);
+            font-weight: 300;
+        }
+        .education li{
+            margin-bottom: 15px;    
+        }
+
+        .education h5{
+            color:  rgb(255, 255, 255);
+            font-weight: 600;
+        }
+
+        .education h4{
+            color:  rgb(16, 134, 118);
+            font-weight: 300;
+        }
+
+        .education h4:nth-child(2){
+            color: #4da8bf;
+            font-weight: 600;
+        }
+
+        .languages .percent{
+            position: relative;
+            width: 100%;
+            height: 6px;
+            background: rgb(106, 125, 15);
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        .languages .percent div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: #527dc6;
+        }
+        .text{
+            color:  #b1c1c4;
+            font-weight: 400;
+        }
+        .container .rightside{
+            position: relative;
+            background: #fff;
+            padding: 40px;
+        }
+        .about{
+            margin-bottom: 20px;
+        }
+        .title2{
+            color: #003147;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        p{
+            color: #333;
+            font-size: 0.8em;
+        }
+        .box{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin: 20px;
+            
+        }
+        .about .box h4{
+            text-transform: uppercase;
+            color: #0c3041;
+        }
+        .about .box h5{
+            text-transform: uppercase;
+            font-weight: 600;
+            color: #13426e;
+        }
+        .text p{
+            color:#003147 ;
+        }
+        .skills .box{
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            justify-content: center;
+            align-items: center;
+        }
+        .skills .box .h5{
+            color: #848c99;
+        }
+        .skills .box .percent{
+            position: relative;
+            width: 100%;
+            height: 10px;
+            background: #003147;
+        }
+        .skills .box .percent div{
+            position: absolute;
+            top: 0;
+            left: 0;height: 100%;
+            background: #4da8bf;
+        }
+        .text p{
+            font-size: 0.8em;
+        }
+        .interest ul{
+            display: grid;
+            grid-template-columns: repeat(4 , 1fr);
+        }
+        .interest ul li{
+            list-style: none;
+            font-weight: 700;
+            color: #003147;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="leftside">
+                <div class="profile">
+                    <div class="image">
+                        <img src="pkpass.jpeg" alt="pkpass">
+                    </div>
+                    <h2>Prabir Kumar Sahoo<br><span>EHS Officer</span></h2>
+                </div>
+                <div class="contactinfo">
+                    <h3 class="title">Contact Info</h3>
+                    <ul>
+                        <li>
+                            <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                            <span class="text">+91 9348700581</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                            <span class="text">prabirsahoo.banty@gmail.com</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-linkedin-square" aria-hidden="true"></i></span>
+                            <span class="text">www.linkedin.com/prabir9178</span>
+                        </li>
+                        <li>
+                            <span class="icon"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                            <span class="text">Cuttack,Odisha</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="contactinfo education">
+                    <h3 class="title">Education</h3>
+                    <ul>
+                        <li>
+                            <h5>2014-2015</h5>
+                            <h4>Board of Secondary Education-BSE</h4>
+                            <h4>Sri Aurobindo School of New Thought</h4>
+                        </li>
+                        <li>
+                            <h5>2015-2018</h5>
+                            <h4>Diploma in MECHANICAL ENGINEERING</h4>
+                            <h4>B.O.S.E. , CUTTACK</h4>
+                        </li>
+                        <li>
+                            <h5>2019-2020</h5>
+                            <h4>Advance Diploma in Fire & Industrial Safety</h4>
+                            <h4>PDIMT, BBSR</h4>
+                        </li>
+                        <li>
+                            <h5>2022 Onwards</h5>
+                            <h4>Pursuing BCA</h4>
+                            <h4>Bharati Vidyapeeth, Pune</h4>
+                        </li>
+                </div>
+                <div class="languages">
+                    <h3 class="title">Languages</h3>
+                    <ul>
+                        <li>
+                             <span class="text">English</span>
+                             <span class="percent">
+                                <div style="width: 80%;"></div>
+                             </span>
+                        </li>
+                        <li>
+                            <span class="text">Hindi</span>
+                            <span class="percent">
+                                <div style="width: 85%;"></div>
+                            </span>
+                       </li>
+                       <li>
+                        <span class="text">Odia</span>
+                        <span class="percent">
+                            <div style="width: 100%;"></div>
+                        </span>
+                   </li>
+                    </ul>
+                </div>
+        </div>
+        <div class="rightside">
+            <div class="about">
+                <h2 class="title2">Profile Info</h2>
+                <p>Competent and Dynamic HSEQ Executive with NEBOSH-IGC and IOSH-MS, and ADIS holder. I took on the responsibility of managing a friendly and healthy safety environment for all my colleagues. It also included TBT,Safety checks monitoring,PTW cheks in every morning, Frequently conducting EHS Trainings and Mock-Drills and following up with my colleagues.Achieving this position allowed me to build confience in my ability to manage many projects at once while still meeting deadlines as expected by management.</p>
+            </div>
+            <div class="about">
+                <h2 class="title2">Experience</h2>
+                <div class="box">
+                    <div class="company">
+                        <h5>January 2023-Present</h5>
+                        <h5>ELANT CONSTRUCTIONS LLP</h5>
+                    </div>
+                    <div class="text">
+                        <h4>Lead EHS Executive</h4>
+                        <p>Current working in TSK Phase -II project at TATA STEEL, Kalinga Nagar, Odisha</p>
+                    </div>
+                    <div class="box">
+                        <div class="company">
+                            <h5>August 2022-January 2023</h5>
+                            <h5>Powersun India Private Limited</h5>
+                        </div>
+                        <div class="text">
+                            <h4>Senior EHS Executive</h4>
+                            <p>Working in various projects all major projects in Pan India, from Pune, HO & handling 7 Safety Stewards in a team.Major Clients are- Vibrant Energy Holdings, TATA Power, Cleanmax Energy Solution, Renew Power</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="company">
+                            <h5>February 2022-Aug 2022</h5>
+                            <h5>Sanghvi Movers Limited</h5>
+                        </div>
+                        <div class="text">
+                            <h4>EHS Executive</h4>
+                            <p>Working in various projects in Pan India, from Pune, HO & handling 7 Safety Stewards in a team.Major Clients are- Vibrant Energy Holdings, TATA Power, Cleanmax Energy Solution, Renew Power</p>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="company">
+                            <h5>April 2020-January 2022</h5>
+                            <h5>Dewanchand Ramsaran Corporation Pvt Ltd</h5>
+                        </div>
+                        <div class="text">
+                            <h4>EHS Executive</h4>
+                            <p>Working in various projects in Pan India, from Pune, HO & handling 7 Safety Stewards in a team.Major Clients are- Vibrant Energy Holdings, TATA Power, Cleanmax Energy Solution, Renew Power</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="skills">
+                    <h2 class="title2">Professional skills</h2>
+                    <div class="box">
+                        <h5>Environmental Safety</h5>
+                        <div class="percent">
+                            <div style="width: 90%;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h5>Waste Management</h5>
+                        <div class="percent">
+                            <div style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h5>ISO Audits</h5>
+                        <div class="percent">
+                        <div style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h5>MS-Excel</h5>
+                        <div class="percent">
+                        <div style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="box">
+                        <h5>MS-Word</h5>
+                        <div class="percent">
+                        <div style="width: 80%;">
+                        </div>
+                        </div>
+                    </div>
+                    <div class="interest">
+                        <h2 class="title2">Interest</h2>
+                        <ul>
+                            <li><i class="fa fa-gamepad" aria-hidden="true"></i>Gaming</li>
+                            <li><i class="fa fa-book" aria-hidden="true"></i>Reading Books</li>
+                            <li><i class="fa fa-pagelines" aria-hidden="true"></i>Planting</li>
+                            <li><i class="fa fa-plane" aria-hidden="true"></i>Travelling</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
